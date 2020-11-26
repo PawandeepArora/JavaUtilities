@@ -28,6 +28,7 @@ public class JschSession {
 			ChannelSftp sftpChannel = (ChannelSftp) session.openChannel("sftp");
 			sftpChannel.connect();
 			
+			// This is to check whether we are able to retrieve the remote file as input stream
 			InputStream inputStream = sftpChannel.get(remoteFile);
 			
 			
